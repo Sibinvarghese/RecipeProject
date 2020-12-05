@@ -1,6 +1,8 @@
 from django.shortcuts import render,redirect
 from users.forms import UserRegistrationForm,UserLoginForm
-from django.contrib.auth import authenticate,login
+from django.contrib.auth import authenticate,login,logout
+from users.forms import ProfileCreateForm
+from .models import Profile
 # Create your views here.
 
 
@@ -18,10 +20,7 @@ def userRegister(request):
             context["form"]=form
             return render(request,"users/register.html",context)
     return render(request,"users/register.html",context)
-
-
 #just a try
-
 def userLogin(request):
     form=UserLoginForm()
     context={}
@@ -45,3 +44,39 @@ def userLogin(request):
             # print("not okay if blocks")
             context["form"]=form
     return render(request,"users/login.html",context)
+
+def userLogout(request):
+    logout(request)
+    return redirect("login")
+
+def create_profile(request):
+    form=ProfileCreateForm(initial={"user":request.user})
+    context={}
+    context["form"]=form
+    updates=Profile.objects.filter(user=request.user)
+    context["updates"]=updates
+    if request.method=="POST":
+        form=ProfileCreateForm(data=request.POST,files=request.FILES)
+        if form.is_valid():
+            form.save()
+            return render(request,"users/home.html")
+        else:
+            context["form"]=form
+    return render(request,"users/createprofile.html",context)
+
+
+def edit_profile(request,pk):
+    id=Profile.objects.get(id=pk)
+    form=ProfileCreateForm(instance=id)
+    context={}
+    context["form"]=form
+    if request.method=="POST":
+        form=ProfileCreateForm(instance=id,data=request.POST,files=request.FILES)
+        if form.is_valid():
+            # print("save")
+            form.save()
+            return redirect("profile")
+        else:
+            context["form"]=form
+            # print("not save")
+    return render(request,"users/editprofile.html",context)

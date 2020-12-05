@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<h3>Welcome To Create Profile </h3>
+<form method="post" enctype="multipart/form-data">
+
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit" value="Create">
+</form>
+<hr>
+<table>
+    <tr>
+        <td>User</td>
+        <td>Profile Picture</td>
+        <td>Bio</td>
+        <td>Birth Day</td>
+    </tr>
+    {% for upds in updates %}
+    <tr>
+        <td>{{upds.user}}</td>
+        <td>{{upds.profile_pic}}</td>
+        <td>{{upds.bio}}</td>
+        <td>{{upds.dirth_date}}</td>
+        <td><a href="{% url 'editprofile' upds.pk %}">Edit</a></td>
+        <td><a href="">Delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+</body>
+</html>
