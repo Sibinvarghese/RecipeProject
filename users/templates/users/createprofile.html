@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'recipes/homepage.html' %}
+    {% block body_block %}
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
 
 
 <h3>Welcome To Create Profile </h3>
-<form method="post" enctype="multipart/form-data">
+<hr>
+<form method="post" class="fontst"  enctype="multipart/form-data">
 
     {%csrf_token%}
     {{form.as_p}}
-    <input type="submit" value="Create">
+    <input type="submit" class="btn btn-primary" value="Create">
 </form>
 <hr>
 <table>
@@ -34,6 +37,6 @@
     {% endfor %}
 </table>
 
-
-</body>
-</html>
+  {% endblock %}
+<!--</body>-->
+<!--</html>-->

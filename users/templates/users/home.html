@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <!-- CSS only -->
 </head>
 <body>
 <h3>welcome To Home Page  {{request.user}} </h3>
 <a href="{% url 'logout'%}">Logout</a>
-<a href="{% url 'profile'%}">Edit Profile</a>
+<a href="{% url 'profile'%}">Create</a>
+<!--<a href="{% url 'profile'%}">Edit Profile</a>-->
+<a href="{% url 'view'%}">view profile</a>
+<a href="{% url 'createrecipes'%}">Create Recipes</a>
+
+
+
+
+
 </body>
 </html>

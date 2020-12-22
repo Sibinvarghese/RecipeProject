@@ -20,13 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19b6e043-1ffe-4bde-a70d-fa7542555c76" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/recipes/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/recipes/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/recipes/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/createprofile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/createprofile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/editprofile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/editprofile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/templates/users/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
@@ -56,10 +60,17 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../BudgetManagementSystem" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Book" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Prgmz And Sw\python\MyDjangoProject\MiniProjects\RecipeProject\recipes\static\css" />
+      <recent name="D:\Prgmz And Sw\python\MyDjangoProject\MiniProjects\RecipeProject\recipes\templates\recipes" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Prgmz And Sw\python\MyDjangoProject\MiniProjects\RecipeProject\users\static\css" />
+      <recent name="D:\Prgmz And Sw\python\MyDjangoProject\MiniProjects\RecipeProject\users\templates\users" />
+      <recent name="D:\Prgmz And Sw\python\MyDjangoProject\MiniProjects\RecipeProject\users\static\img" />
       <recent name="D:\Prgmz And Sw\python\MyDjangoProject\MiniProjects\RecipeProject\users" />
       <recent name="D:\Prgmz And Sw\python\MyDjangoProject\MiniProjects\RecipeProject\recipes" />
     </key>
@@ -88,9 +99,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="142" y="119" key="FileChooserDialogImpl" timestamp="1607158177471">
+    <state x="275" y="68" key="FileChooserDialogImpl" timestamp="1608523842571">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="142" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1607158177471" />
+    <state x="275" y="68" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1608523842571" />
   </component>
 </project>

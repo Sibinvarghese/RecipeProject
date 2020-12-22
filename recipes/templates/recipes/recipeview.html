@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% extends 'recipes/homepage.html' %}
+    {% block body_block%}
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<h2>View{{recipe.recipe_name}}</h2>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+
+        <div class="col-4">
+<!--    start-->
+<div class="card" style="width: 18rem;">
+  <img src="{{recipe.recipe_img.url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h3 class="card-title">{{recipe.recipe_name}}</h3>
+    <p class="card-text">
+        {{recipe.ingredients}}
+    </p>
+    <p>{{recipe.category}}</p>
+     <p>{{recipe.created_by}}</p>
+  </div>
+
+<!--  <div class="card-body">-->
+<!--    <a href="#" class="card-link">Card link</a>-->
+<!--    <a href="#" class="card-link">Another link</a>-->
+<!--  </div>-->
+</div>
+
+<!--            end-->
+
+        </div>
+
+        <div class="col-4"></div>
+    </div>
+
+
+</div>
+{% endblock %}
