@@ -7,13 +7,10 @@
 <!--    <title>Title</title>-->
 <!--</head>-->
 <!--<body>-->
-<h3>edit Profile </h3>
-<form method="post" enctype="multipart/form-data">
 
+<form method="post" enctype="multipart/form-data">
     {%csrf_token%}
     {{form.as_p}}
-    <input type="submit" class="btn btn-primary" value="Create">
+    <input type="submit" class="btn btn-primary" value="Edit">
 </form>
 {% endblock %}
-<!--</body>-->
-<!--</html>-->

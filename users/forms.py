@@ -16,6 +16,7 @@ class UserLoginForm(forms.Form):
         print("inside the clean")
 
 class ProfileCreateForm(ModelForm):
+    # user = forms.CharField(widget=forms.TextInput(attrs={'readonly': 'readonly'}))
     class Meta:
         model=Profile
         fields=["user","profile_pic","bio","dirth_date"]

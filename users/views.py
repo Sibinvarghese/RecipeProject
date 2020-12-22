@@ -4,8 +4,6 @@ from django.contrib.auth import authenticate,login,logout
 from users.forms import ProfileCreateForm
 from .models import Profile
 # Create your views here.
-
-
 def userRegister(request):
     form=UserRegistrationForm()
     context={}
@@ -22,28 +20,29 @@ def userRegister(request):
     return render(request,"users/register.html",context)
 #just a try
 def userLogin(request):
-    form=UserLoginForm()
-    context={}
-    context["form"]=form
-    if request.method=="POST":
-        form=UserLoginForm(request.POST)
-        # print("enter the if block")
-        if form.is_valid():
+    # form=UserLoginForm()
+    # context={}
+    # context["form"]=form
+    # if request.method=="POST":
+    #     form=UserLoginForm(request.POST)
+    #     # print("enter the if block")
+    #     if form.is_valid():
             # print("enter the valid function")
-            username=form.cleaned_data.get("username")
-            password=form.cleaned_data.get("password")
+            username=request.POST.get("username")
+            password=request.POST.get("password")
             user=authenticate(request,username=username,password=password)
             if user:
                 # print("user okay")
                 login(request,user)
-                return render(request, "users/home.html")
+                return redirect("allrecipes")
+                # return render(request, "users/home.html")
 
             else:
-                return render(request, "users/login.html", context)
-        else:
-            # print("not okay if blocks")
-            context["form"]=form
-    return render(request,"users/login.html",context)
+                return render(request, "users/signin.html")
+        # else:
+        #     # print("not okay if blocks")
+        #     # context["form"]=form
+    # return render(request,"users/signin.html")
 
 def userLogout(request):
     logout(request)
@@ -67,7 +66,7 @@ def create_profile(request):
 
 def edit_profile(request,pk):
     id=Profile.objects.get(id=pk)
-    form=ProfileCreateForm(instance=id)
+    form=ProfileCreateForm(initial={"user":request.user},instance=id)
     context={}
     context["form"]=form
     if request.method=="POST":
@@ -80,3 +79,10 @@ def edit_profile(request,pk):
             context["form"]=form
             # print("not save")
     return render(request,"users/editprofile.html",context)
+
+
+def view_profile(request):
+    user=Profile.objects.get(user=request.user)
+    context = {}
+    context["user"] = user
+    return render(request,"users/viewprofile.html",context)
